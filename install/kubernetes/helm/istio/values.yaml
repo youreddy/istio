@@ -125,7 +125,7 @@ ingress:
 #  memory: 128Mi
   service:
     loadBalancerIP: ""
-    type: LoadBalancer #change to NodePort, ClusterIP or LoadBalancer if need be
+    type: NodePort #change to NodePort, ClusterIP or LoadBalancer if need be
     ports:
     - port: 80
       name: http
@@ -156,7 +156,7 @@ ingressgateway:
       istio: ingressgateway
     #namespace: istio-system
     loadBalancerIP: ""
-    type: LoadBalancer #change to NodePort, ClusterIP or LoadBalancer if need be
+    type: NodePort #change to NodePort, ClusterIP or LoadBalancer if need be
     ports:
       ## You can add custom gateway ports
     - port: 80

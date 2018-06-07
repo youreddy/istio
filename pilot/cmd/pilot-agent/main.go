@@ -304,8 +304,6 @@ func init() {
 	proxyCmd.PersistentFlags().DurationVar(&connectTimeout, "connectTimeout",
 		timeDuration(values.ConnectTimeout),
 		"Connection timeout used by Envoy for supporting services")
-	proxyCmd.PersistentFlags().StringVar(&statsdUDPAddress, "statsdUdpAddress", values.StatsdUdpAddress,
-		"IP Address and Port of a statsd UDP listener (e.g. 10.75.241.127:9125)")
 	proxyCmd.PersistentFlags().IntVar(&proxyAdminPort, "proxyAdminPort", int(values.ProxyAdminPort),
 		"Port on which Envoy should listen for administrative commands")
 	proxyCmd.PersistentFlags().StringVar(&controlPlaneAuthPolicy, "controlPlaneAuthPolicy",
